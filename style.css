@@ -1,0 +1,197 @@
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('font/Inter-Regular.woff2') format('woff2'),
+    url('font/Inter-Regular.woff') format('woff');
+}
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  outline: none !important;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 200ms ease-in 0s;
+}
+
+h1 {
+  transition: all 200ms ease-in 0s;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue',
+    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  font-size: 4em;
+  color: #000000;
+  font-weight: 400;
+  display: inline-block;
+}
+
+h1 span {
+  color: #9100f7;
+}
+
+.dark {
+  background: black;
+}
+
+.dark h1 {
+  color: white;
+}
+
+@media only screen and (max-device-width: 425px) {
+  h1 {
+    font-size: 3em;
+  }
+}
+
+#switch-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(128, 199, 203);
+  transition: all 200ms ease-in 0s;
+  border-radius: 34px;
+}
+
+.dark .slider {
+  background-color: #9100f7;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgb(253, 223, 117);
+  transition: all 200ms ease-in 0s;
+  border-radius: 50%;
+  border: 3px solid rgba(214, 176, 94, 0.71);
+}
+
+.dark .slider:before {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: white;
+}
+
+.dark .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.moon {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  fill: white;
+  opacity: 1;
+  transition: all 200ms ease-in 0s;
+  top: 10px;
+  left: 10px;
+}
+
+.dark .moon {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.stars {
+  transition: all 200ms ease-in 0s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.dark .stars {
+  opacity: 1;
+  visibility: visible;
+}
+
+.stars > div {
+  background-color: white;
+  position: absolute;
+  border-radius: 100%;
+  transition: all 50ms linear 0s;
+}
+
+.stars .star1 {
+  width: 1px;
+  height: 1px;
+  top: 7px;
+  left: 12px;
+}
+
+.stars .star2 {
+  width: 1px;
+  height: 1px;
+  top: 10px;
+  left: 24px;
+}
+
+.stars .star3 {
+  width: 1px;
+  height: 1px;
+  top: 16px;
+  left: 8px;
+}
+
+.stars .star4 {
+  width: 1px;
+  height: 1px;
+  top: 24px;
+  left: 21px;
+}
+
+.stars .star5 {
+  width: 2px;
+  height: 2px;
+  top: 14px;
+  left: 15px;
+}
+
+.stars .star6 {
+  width: 2px;
+  height: 2px;
+  top: 21px;
+  left: 10px;
+}

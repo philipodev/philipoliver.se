@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>philip / oliver</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>philip <span>/</span> oliver</h1>
+
+    <div id="switch-container">
+      <label class="switch">
+        <input onclick="toggle()" type="checkbox" />
+        <span class="slider">
+          <svg
+            class="moon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="13"
+            height="13"
+            viewBox="0 0 30 32"
+          >
+            <title>moon-inv</title>
+            <path
+              d="M22.592 21.504q3.36 0 6.56-1.792-1.344 4.64-5.184 7.616t-8.8 2.976q-6.016 0-10.304-4.288T.576 15.68q0-4.928 2.976-8.768t7.584-5.216q-1.792 3.2-1.792 6.56 0 5.504 3.904 9.376t9.344 3.872z"
+            ></path>
+          </svg>
+          <div class="stars">
+            <div size="2" x="10" y="3" class="star1"></div>
+            <div size="1" x="3" y="7" class="star2"></div>
+            <div size="1" x="12" y="18" class="star3"></div>
+            <div size="1" x="15" y="10" class="star4"></div>
+            <div size="1" x="19" y="4" class="star5"></div>
+            <div size="2" x="22" y="14" class="star6"></div>
+          </div>
+        </span>
+      </label>
+    </div>
+
+    <script>
+      var now = new Date();
+      if (now.getHours() >= 19 || now.getHours() < 9) {
+        document.body.className = 'dark';
+      }
+
+      window.toggle = function() {
+        document.body.classList.toggle('dark');
+      };
+    </script>
+  </body>
+</html>
