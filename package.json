@@ -11,6 +11,17 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-pwa-manifest": "^3.0.5"
+  },
+  "pwaManifest": {
+    "name": "philip / oliver",
+    "shortName": "p / o",
+    "theme": "#9100F7",
+    "generateIconOptions": {
+      "baseIcon": "./icon.png",
+      "sizes": [192, 384, 512],
+      "genFavicons": true
+    }
   }
 }
